@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="cy-en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Hero Profile · Proffil Arwr</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!--
+  ================================================================
+  TEACHER NOTES
+  ================================================================
+  Students edit FIVE things only — marked with ✏️ below.
+  Everything else is already built. Do not touch it.
+
+  STEP 3.5 — Add a theme class to <body>:
+    <body class="theme-wizard">     teal background
+    <body class="theme-knight">     navy background
+    <body class="theme-dragon">     red background
+    <body class="theme-assassin">   green background
+
+  STEP 5 — Change the data-points numbers (0–4 each).
+    Total across all four stats must equal 12.
+    JS reads these and sets the bar widths automatically.
+
+  BACKGROUND IMAGES NEEDED IN SAME FOLDER AS THIS FILE:
+    bg-wizard.png    bg-knight.png
+    bg-dragon.png    bg-assassin.png
+  ================================================================
+  -->
+
+  <!-- 🎨 STEP 3.5 — Change the word body to add your theme     -->
+  <!-- Example:  <body class="theme-wizard">                     -->
+  <body>
+    <main>
+      <article class="card">
+        <header class="card-header">
+          <p class="guild-line">
+            🐉 Urdd Llandrillo · Order of Llandrillo · Byd Cymru / Realm of
+            Wales
+          </p>
+        </header>
+
+        <div class="card-body">
+          <section class="hero-section">
+            <div class="hero-text">
+              <!-- ✏️ STEP 1 — Type your h1 tag with your name inside  -->
+              <!-- Your teacher will show you how                       -->
+              <!-- Example:  <h1>Alex Johnson</h1>                      -->
+
+              <!-- ✏️ STEP 2 — Type your p tag with your class inside   -->
+              <!-- Your teacher will show you how                        -->
+              <!-- Include Welsh class, English class and level          -->
+              <!-- Example:  <p>Dewin Côd · Code Wizard · Lefel 1</p>   -->
+            </div>
+          </section>
+
+          <!-- Stats — only change the data-points numbers             -->
+          <!-- ✏️ STEP 5 — Change the numbers (0–4 each, total = 12)  -->
+          <section class="stats-section" aria-label="Character stats">
+            <div class="stat">
+              <p class="stat-label">Dewrder / Courage</p>
+              <div class="bar-track" role="progressbar" aria-label="Courage">
+                <div class="bar-fill courage" data-points="3"></div>
+              </div>
+            </div>
+
+            <div class="stat">
+              <p class="stat-label">Doethineb / Wisdom</p>
+              <div class="bar-track" role="progressbar" aria-label="Wisdom">
+                <div class="bar-fill wisdom" data-points="3"></div>
+              </div>
+            </div>
+
+            <div class="stat">
+              <p class="stat-label">Cyflymder / Speed</p>
+              <div class="bar-track" role="progressbar" aria-label="Speed">
+                <div class="bar-fill speed" data-points="3"></div>
+              </div>
+            </div>
+
+            <div class="stat">
+              <p class="stat-label">Cryfder / Strength</p>
+              <div class="bar-track" role="progressbar" aria-label="Strength">
+                <div class="bar-fill strength" data-points="3"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="power-box">
+            <p class="power-label">Gallu Arbennig / Special Power</p>
+
+            <!-- ✏️ STEP 4 — Type your power inside the p tag below   -->
+            <!-- Your teacher will show you how                        -->
+            <!-- Pick your power from the handout sheet                -->
+            <!-- Example:                                              -->
+            <!-- <p class="power-value">Lightning Flame · Fflam y Mellt</p> -->
+            <p class="power-value"></p>
+          </section>
+        </div>
+
+        <footer class="card-footer">
+          <p class="footer-college">Coleg Llandrillo · Academi Ddigidol 2025</p>
+          <button class="activate-btn" id="activate-btn" type="button">
+            Activate Power
+          </button>
+        </footer>
+      </article>
+    </main>
+
+    <script src="celebrate.js"></script>
+  </body>
+</html>
