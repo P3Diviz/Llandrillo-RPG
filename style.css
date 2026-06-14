@@ -164,11 +164,11 @@ body.theme-valor .guild-line,
 body.theme-dragon .guild-line,
 body.theme-shadow .guild-line,
 body.theme-demo .guild-line {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* ── card body ───────────────────────────────────────────────── */
@@ -197,7 +197,7 @@ body.theme-valor h1,
 body.theme-dragon h1,
 body.theme-shadow h1,
 body.theme-demo h1 {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.95);
   letter-spacing: 0.4px;
@@ -211,7 +211,7 @@ body.theme-valor .hero-text p,
 body.theme-dragon .hero-text p,
 body.theme-shadow .hero-text p,
 body.theme-demo .hero-text p {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -253,7 +253,7 @@ body.theme-valor .power-label,
 body.theme-dragon .power-label,
 body.theme-shadow .power-label,
 body.theme-demo .power-label {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.8px;
   text-transform: uppercase;
@@ -267,7 +267,7 @@ body.theme-valor .power-box p,
 body.theme-dragon .power-box p,
 body.theme-shadow .power-box p,
 body.theme-demo .power-box p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
@@ -294,11 +294,11 @@ body.theme-valor .stat-label,
 body.theme-dragon .stat-label,
 body.theme-shadow .stat-label,
 body.theme-demo .stat-label {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 5px;
 }
 
@@ -308,7 +308,7 @@ body.theme-dragon .bar-track,
 body.theme-shadow .bar-track,
 body.theme-demo .bar-track {
   height: 5px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -412,7 +412,7 @@ body.theme-arcane .magic {
   background: linear-gradient(90deg, #a060d0, #c080f0);
 }
 body.theme-arcane .stealth {
-  background: linear-gradient(90deg, #40a090, #60c8b8);
+  background: linear-gradient(90deg, #a04b40, #c87060);
 }
 
 body.theme-arcane button {
