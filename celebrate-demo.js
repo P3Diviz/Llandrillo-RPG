@@ -5,19 +5,14 @@
   LECTURER DEMO VERSION — do NOT give this file to students.
 
   Same stat bar logic as student version.
-  Custom celebration message congratulates the whole class.
+  activatePower() fires the class congratulations message.
   Message stays on screen for 7 seconds.
 ================================================================
 */
 
-/* ── START ──────────────────────────────────────────────────── */
-
 window.addEventListener('load', function () {
   setStatBars();
-  setupButton();
 });
-
-/* ── STAT BARS ──────────────────────────────────────────────── */
 
 function setStatBars() {
   var bars = document.querySelectorAll('.bar-fill');
@@ -33,52 +28,45 @@ function setStatBars() {
   }
 }
 
-/* ── BUTTON ─────────────────────────────────────────────────── */
-
-function setupButton() {
-  var btn = document.getElementById('activate-btn');
-  if (!btn) {
-    return;
-  }
-  btn.addEventListener('click', function () {
+function activatePower() {
+  var btn = document.querySelector('button');
+  if (btn) {
     btn.disabled = true;
     btn.textContent = '★ Cwblhau / Complete ★';
-    fireParticles();
-    showMessage();
-  });
+  }
+  fireParticles();
+  showMessage();
 }
-
-/* ── PARTICLES ──────────────────────────────────────────────── */
 
 function getThemeColours() {
   var cl = document.body.classList;
-  if (cl.contains('theme-wizard')) {
-    return ['#40d8c0', '#8060d0', '#e86040', '#60e8d0', '#ffffff'];
+  if (cl.contains('theme-arcane')) {
+    return ['#40d8c0', '#8060d0', '#a060d0', '#60e8d0', '#ffffff'];
   }
-  if (cl.contains('theme-knight')) {
+  if (cl.contains('theme-valor')) {
     return ['#7070e0', '#8050c0', '#e8a040', '#9090f8', '#ffffff'];
   }
   if (cl.contains('theme-dragon')) {
     return ['#e04040', '#c03030', '#e8a040', '#f06060', '#ffffff'];
   }
-  if (cl.contains('theme-assassin')) {
-    return ['#50c060', '#78c030', '#e8a040', '#60d070', '#ffffff'];
+  if (cl.contains('theme-shadow')) {
+    return ['#50c060', '#78c030', '#40b050', '#60d070', '#ffffff'];
   }
   return ['#aaaaaa', '#cccccc', '#eeeeee', '#888888', '#ffffff'];
 }
 
 function getThemeStrip() {
   var cl = document.body.classList;
-  if (cl.contains('theme-wizard')) {
+  if (cl.contains('theme-arcane')) {
     return '#40d8c0';
   }
-  if (cl.contains('theme-knight')) {
+  if (cl.contains('theme-valor')) {
     return '#7070e0';
   }
   if (cl.contains('theme-dragon')) {
     return '#e04040';
   }
-  if (cl.contains('theme-assassin')) {
+  if (cl.contains('theme-shadow')) {
     return '#50c060';
   }
   return '#aaaaaa';
@@ -86,7 +74,6 @@ function getThemeStrip() {
 
 function fireParticles() {
   var colours = getThemeColours();
-  /* more particles for the class reveal moment */
   for (var i = 0; i < 130; i++) {
     (function (delay) {
       setTimeout(function () {
@@ -138,8 +125,6 @@ function createParticle(colour) {
   }, 16);
 }
 
-/* ── MESSAGE OVERLAY ────────────────────────────────────────── */
-
 function showMessage() {
   var strip = getThemeStrip();
 
@@ -173,40 +158,20 @@ function showMessage() {
 
   panel.innerHTML =
     '<p style="font-size:44px;margin-bottom:16px;">★</p>' +
-    '<p style="font-size:26px;font-weight:700;letter-spacing:1px;' +
-    'color:#ffffff;margin-bottom:8px;">' +
-    'Llongyfarchiadau i bawb!' +
-    '</p>' +
-    '<p style="font-size:16px;font-weight:400;letter-spacing:0;' +
-    'text-transform:none;color:rgba(255,255,255,0.7);margin-bottom:26px;">' +
-    'Congratulations to you all!' +
-    '</p>' +
-    '<p style="font-size:14px;font-weight:600;letter-spacing:0.5px;' +
-    'color:#ffffff;margin-bottom:6px;line-height:1.6;">' +
-    "Da iawn \u2014 rydych chi'n godwyr c\u00f4d nawr!" +
-    '</p>' +
-    '<p style="font-size:14px;font-weight:400;letter-spacing:0.5px;' +
-    'text-transform:none;color:rgba(255,255,255,0.6);margin-bottom:26px;line-height:1.6;">' +
-    'Well done \u2014 you are coders now!' +
-    '</p>' +
-    '<p style="font-size:11px;font-weight:700;letter-spacing:2px;' +
-    'color:#4ade80;margin-bottom:4px;">' +
-    'CROESO I GOLEG LLANDRILLO' +
-    '</p>' +
-    '<p style="font-size:11px;font-weight:400;letter-spacing:2px;' +
-    'text-transform:none;color:rgba(74,222,128,0.6);">' +
-    'WELCOME TO COLEG LLANDRILLO' +
-    '</p>';
+    '<p style="font-size:26px;font-weight:700;letter-spacing:1px;color:#ffffff;margin-bottom:8px;">Llongyfarchiadau i bawb!</p>' +
+    '<p style="font-size:16px;font-weight:400;letter-spacing:0;text-transform:none;color:rgba(255,255,255,0.7);margin-bottom:26px;">Congratulations to you all!</p>' +
+    '<p style="font-size:14px;font-weight:600;letter-spacing:0.5px;color:#ffffff;margin-bottom:6px;line-height:1.6;">Da iawn \u2014 rydych chi\'n godwyr c\u00f4d nawr!</p>' +
+    '<p style="font-size:14px;font-weight:400;letter-spacing:0.5px;text-transform:none;color:rgba(255,255,255,0.6);margin-bottom:26px;line-height:1.6;">Well done \u2014 you are coders now!</p>' +
+    '<p style="font-size:11px;font-weight:700;letter-spacing:2px;color:#4ade80;margin-bottom:4px;">CROESO I GOLEG LLANDRILLO</p>' +
+    '<p style="font-size:11px;font-weight:400;letter-spacing:2px;text-transform:none;color:rgba(74,222,128,0.6);">WELCOME TO COLEG LLANDRILLO</p>';
 
   var sty = document.createElement('style');
   sty.textContent =
     '@keyframes popIn{from{transform:scale(0.3);opacity:0;}to{transform:scale(1);opacity:1;}}';
   document.head.appendChild(sty);
-
   overlay.appendChild(panel);
   document.body.appendChild(overlay);
 
-  /* 7 seconds — gives the whole class time to read */
   setTimeout(function () {
     overlay.style.transition = 'opacity 1.5s ease';
     overlay.style.opacity = '0';

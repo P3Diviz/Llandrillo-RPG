@@ -11,27 +11,26 @@
   ================================================================
   TEACHER NOTES
   ================================================================
-  Students edit FIVE things only — marked with ✏️ below.
+  Students code SIX things — marked with ✏️ below.
   Everything else is already built. Do not touch it.
 
   STEP 3.5 — Add a theme class to <body>:
-    <body class="theme-wizard">     teal background
-    <body class="theme-knight">     navy background
-    <body class="theme-dragon">     red background
-    <body class="theme-assassin">   green background
+    <body class="theme-arcane">    teal  — Wizard / Sorceress
+    <body class="theme-valor">     navy  — Knight / Archer
+    <body class="theme-dragon">    red   — Dragon
+    <body class="theme-shadow">    green — Assassin / Rogue
 
-  STEP 5 — Change the data-points numbers (0–4 each).
-    Total across all four stats must equal 12.
-    JS reads these and sets the bar widths automatically.
+  STEP 5 — Change the data-points numbers (0-4 each).
+    Total across ALL SIX stats must equal 12.
+    Maximum 4 points per stat.
 
-  BACKGROUND IMAGES NEEDED IN SAME FOLDER AS THIS FILE:
-    bg-wizard.png    bg-knight.png
-    bg-dragon.png    bg-assassin.png
+  STEP 6 — Students code the button themselves.
+    Button calls activatePower() via onclick.
   ================================================================
   -->
 
   <!-- 🎨 STEP 3.5 — Change the word body to add your theme     -->
-  <!-- Example:  <body class="theme-wizard">                     -->
+  <!-- Example:  <body class="theme-arcane">                     -->
   <body>
     <main>
       <article class="card">
@@ -45,45 +44,59 @@
         <div class="card-body">
           <section class="hero-section">
             <div class="hero-text">
-              <!-- ✏️ STEP 1 — Type your h1 tag with your name inside  -->
+              <!-- ✏️ STEP 1 — Type your h1 tag here                   -->
               <!-- Your teacher will show you how                       -->
-              <!-- Example:  <h1>Alex Johnson</h1>                      -->
 
-              <!-- ✏️ STEP 2 — Type your p tag with your class inside   -->
-              <!-- Your teacher will show you how                        -->
-              <!-- Include Welsh class, English class and level          -->
-              <!-- Example:  <p>Dewin Côd · Code Wizard · Lefel 1</p>   -->
+              <!-- ✏️ STEP 2 — Type your p tag here                    -->
+              <!-- Your teacher will show you how                       -->
+
+              <!-- ✏️ STEP 3 — Type your img tag here                  -->
+              <!-- Your teacher will show you how                       -->
             </div>
           </section>
 
           <!-- Stats — only change the data-points numbers             -->
-          <!-- ✏️ STEP 5 — Change the numbers (0–4 each, total = 12)  -->
+          <!-- ✏️ STEP 5 — Change the numbers (0-4 each, total = 12)  -->
           <section class="stats-section" aria-label="Character stats">
             <div class="stat">
               <p class="stat-label">Dewrder / Courage</p>
               <div class="bar-track" role="progressbar" aria-label="Courage">
-                <div class="bar-fill courage" data-points="3"></div>
+                <div class="bar-fill courage" data-points="2"></div>
               </div>
             </div>
 
             <div class="stat">
               <p class="stat-label">Doethineb / Wisdom</p>
               <div class="bar-track" role="progressbar" aria-label="Wisdom">
-                <div class="bar-fill wisdom" data-points="3"></div>
+                <div class="bar-fill wisdom" data-points="2"></div>
               </div>
             </div>
 
             <div class="stat">
               <p class="stat-label">Cyflymder / Speed</p>
               <div class="bar-track" role="progressbar" aria-label="Speed">
-                <div class="bar-fill speed" data-points="3"></div>
+                <div class="bar-fill speed" data-points="2"></div>
               </div>
             </div>
 
             <div class="stat">
               <p class="stat-label">Cryfder / Strength</p>
               <div class="bar-track" role="progressbar" aria-label="Strength">
-                <div class="bar-fill strength" data-points="3"></div>
+                <div class="bar-fill strength" data-points="2"></div>
+              </div>
+            </div>
+
+            <div class="stat">
+              <p class="stat-label">Hud / Magic</p>
+              <div class="bar-track" role="progressbar" aria-label="Magic">
+                <div class="bar-fill magic" data-points="2"></div>
+              </div>
+            </div>
+
+            <div class="stat">
+              <p class="stat-label">Llechwraidd / Stealth</p>
+              <div class="bar-track" role="progressbar" aria-label="Stealth">
+                <div class="bar-fill stealth" data-points="2"></div>
               </div>
             </div>
           </section>
@@ -91,20 +104,16 @@
           <section class="power-box">
             <p class="power-label">Gallu Arbennig / Special Power</p>
 
-            <!-- ✏️ STEP 4 — Type your power inside the p tag below   -->
-            <!-- Your teacher will show you how                        -->
-            <!-- Pick your power from the handout sheet                -->
-            <!-- Example:                                              -->
-            <!-- <p class="power-value">Lightning Flame · Fflam y Mellt</p> -->
-            <p class="power-value"></p>
+            <!-- ✏️ STEP 4 — Type your p tag here                      -->
+            <!-- Your teacher will show you how                         -->
           </section>
         </div>
 
         <footer class="card-footer">
           <p class="footer-college">Coleg Llandrillo · Academi Ddigidol 2025</p>
-          <button class="activate-btn" id="activate-btn" type="button">
-            Activate Power
-          </button>
+
+          <!-- ✏️ STEP 6 — Type your button tag here                   -->
+          <!-- Your teacher will show you how                           -->
         </footer>
       </article>
     </main>
